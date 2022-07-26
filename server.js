@@ -21,5 +21,5 @@ app.post("/send", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Corriendo en puerto: ${port}`);
+  console.log(`Corriendo en puerto:${port}`);
 });
