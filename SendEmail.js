@@ -9,6 +9,10 @@ const Email = (options) => {
       user: process.env.USER, // email
       pass: process.env.PASSWORD, //password
     },
+    tls: {
+      // do not fail on invalid certs
+      rejectUnauthorized: false,
+    },
   });
   transpoter.sendMail(options, (err, info) => {
     if (err) {
