@@ -1,17 +1,16 @@
 import nodemailer from "nodemailer";
 
 const Email = (options) => {
-  let transporter = nodemailer.createTransport({
-    service: "hotmail",
+  let transpoter = nodemailer.createTransport({
+    service: "hotmail", //i use outlook
     auth: {
-      user: process.env.USER, //user or email
+      user: process.env.USER, // email
       pass: process.env.PASSWORD, //password
     },
   });
-
-  transporter.sendMail(options, (error, info) => {
-    if (error) {
-      console.log(error);
+  transpoter.sendMail(options, (err, info) => {
+    if (err) {
+      console.log(err);
       return;
     }
   });
